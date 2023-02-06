@@ -23,6 +23,10 @@ def percentile(dataframe,percentiles,columns='all'):
                 print("The " + str(percentile) + "th Percentile of " + column + " is " + str(sorted_list[index]))
                 
                 
+#################################################################################################################################################################
+#################################################################################################################################################################
+
+
 def quantile(dataframe,quantiles,columns='all'):
     list_of_int_columns = list(dataframe.select_dtypes(include=['int64','float64']).columns)
     
