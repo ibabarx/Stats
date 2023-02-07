@@ -1,6 +1,21 @@
-def mean(dataframe,columns='all',decimal_points=2,plot=False,width = 0.8,bottom=None,align = 'center',
+def mean(dataframe,columns='all',decimal_points=2,plot=False,width = 0.8,align = 'center',
          ticks_rotation=[90,0],color='green',edgecolor='green',linewidth=0):
-         
+    '''
+    dataframe : The Dataframe that we want to perform the Mean operation on
+    columns   : Default = 'all' , Means of all applicable columns in calculated.
+                Else define all the columns to find means of as strings, in a list.
+    decimal_points : The number of integers after decimal points in the returned solution.
+                     Default = 2
+    plot : Draw a Barplot of the Columns and their respective means
+           Default = False
+           width : Width of the bars 
+                   Default = 0.8
+           align : alignment of bar with respect to their labels
+                   Default = centre
+                   others = left,right
+           ticks_rotation = rotation of the x and y labels respectively , as a list
+                            Default = [0,90]
+    '''     
     # An Inner function that is used to draw bar plots    
     def plotter():
         plt.figure()
