@@ -115,7 +115,7 @@ def trimmed_mean(dataframe,columns='all',trim = 0.05,decimal_points=2,plot=False
                 series = series[no_to_trim+1 : (series.shape[0]-no_to_trim)+1]
                 sol = str(sum(series) / (dataframe[column].shape[0]-(2*no_to_trim)))
                 print(column + " Mean = " + sol)
-                mean_dictionary[column] = sum(dataframe[column]) / dataframe[column].shape[0]
+                mean_dictionary[column] = sol
                 data_frame = pd.DataFrame(mean_dictionary.items())
             plotter()
                   
@@ -136,7 +136,7 @@ def trimmed_mean(dataframe,columns='all',trim = 0.05,decimal_points=2,plot=False
                 series = series[no_to_trim+1 : (series.shape[0]-no_to_trim)+1]
                 sol = str(sum(series) / (dataframe[column].shape[0]-(2*no_to_trim)))
                 print(column + " Mean = " + sol)
-                mean_dictionary[column] = sum(dataframe[column]) / dataframe[column].shape[0]
+                mean_dictionary[column] = sol
                 data_frame = pd.DataFrame(mean_dictionary.items())
             plotter()
     
