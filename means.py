@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 def mean(dataframe,columns='all',decimal_points=2,plot=False,width = 0.8,align = 'center',
          ticks_rotation=[90,0],color='green',edgecolor='green',linewidth=0):
          
@@ -27,7 +29,7 @@ def mean(dataframe,columns='all',decimal_points=2,plot=False,width = 0.8,align =
     # An Inner function that is used to draw bar plots    
     def plotter():
         plt.figure()
-        plt.bar(x = data_frame[0],height=data_frame[1],width=width, bottom=bottom, align=align,color=color,edgecolor='green'
+        plt.bar(x = data_frame[0],height=data_frame[1],width=width, align=align,color=color,edgecolor='green'
                 ,linewidth=linewidth)
         plt.xticks(rotation=ticks_rotation[0])
         plt.yticks(rotation=ticks_rotation[1])
@@ -59,7 +61,7 @@ def mean(dataframe,columns='all',decimal_points=2,plot=False,width = 0.8,align =
             
 #################################################################################################################################################################
                                                                
-def trimmed_mean(dataframe,columns='all',trim = 0.05,decimal_points=2,plot=False,width = 0.8,bottom=None,align = 'center',
+def trimmed_mean(dataframe,columns='all',trim = 0.05,decimal_points=2,plot=False,width = 0.8 ,align = 'center',
          ticks_rotation=[90,0],color='green',edgecolor='green',linewidth=0):
          
     '''
@@ -88,7 +90,7 @@ def trimmed_mean(dataframe,columns='all',trim = 0.05,decimal_points=2,plot=False
     # An Inner function that is used to draw bar plots    
     def plotter():
         plt.figure()
-        plt.bar(x = data_frame[0],height=data_frame[1],width=width, bottom=bottom, align=align,color=color,edgecolor='green'
+        plt.bar(x = data_frame[0],height=data_frame[1],width=width, align=align,color=color,edgecolor='green'
                 ,linewidth=linewidth)
         plt.xticks(rotation=ticks_rotation[0])
         plt.yticks(rotation=ticks_rotation[1])
