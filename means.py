@@ -45,7 +45,7 @@ def mean(dataframe,columns='all',decimal_points=2,plot=False,width = 0.8,align =
             for column in list_of_int_columns:
                 print(column + " Mean = " + str(sum(dataframe[column]) / dataframe[column].shape[0]))
                 mean_dictionary[column] = sum(dataframe[column]) / dataframe[column].shape[0]      
-                data_frame = pd.DataFrame(mean_dictionary.items())
+            data_frame = pd.DataFrame(mean_dictionary.items())
             plotter()
                     
     else:         # If means of specific Features is required
@@ -56,7 +56,7 @@ def mean(dataframe,columns='all',decimal_points=2,plot=False,width = 0.8,align =
             for column in columns:
                 print(column + " Mean = " + str(sum(dataframe[column]) / dataframe[column].shape[0]))
                 mean_dictionary[column] = sum(dataframe[column]) / dataframe[column].shape[0]
-                data_frame = pd.DataFrame(mean_dictionary.items())
+            data_frame = pd.DataFrame(mean_dictionary.items())
             plotter()
             
 #################################################################################################################################################################
@@ -116,7 +116,7 @@ def trimmed_mean(dataframe,columns='all',trim = 0.05,decimal_points=2,plot=False
                 sol = str(sum(series) / (dataframe[column].shape[0]-(2*no_to_trim)))
                 print(column + " Mean = " + sol)
                 mean_dictionary[column] = sol
-                data_frame = pd.DataFrame(mean_dictionary.items())
+            data_frame = pd.DataFrame(mean_dictionary.items())
             plotter()
                   
     else:         # If the user wants to find the mean of specific Features        
@@ -137,7 +137,7 @@ def trimmed_mean(dataframe,columns='all',trim = 0.05,decimal_points=2,plot=False
                 sol = str(sum(series) / (dataframe[column].shape[0]-(2*no_to_trim)))
                 print(column + " Mean = " + sol)
                 mean_dictionary[column] = sol
-                data_frame = pd.DataFrame(mean_dictionary.items())
+            data_frame = pd.DataFrame(mean_dictionary.items())
             plotter()
     
 #################################################################################################################################################################
