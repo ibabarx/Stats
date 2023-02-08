@@ -1,4 +1,4 @@
-def rss(observed,predicted,p=1,metric='rmse'):
+def rmse(observed,predicted,p=1,metric='rmse'):
     
     residue_squared = []
     rows = observed.shape[0]
