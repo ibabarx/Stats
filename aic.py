@@ -1,5 +1,9 @@
-import math
+# FORMULA
+# AIC = 2P + n log(RSS/n)
+
 def AIC(observed,predicted,p):
+    
+    import math
     n = len(observed.tolist())
     def rss(observed,predicted):
         list_observed = observed.tolist()
