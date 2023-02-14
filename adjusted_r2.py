@@ -1,3 +1,6 @@
+# FORMULA
+# 1 − (1 − R^2)( n − 1 / n − P − 1 )
+
 def ajdusted_rSquared(observed,predicted,p=5):
     def r_squared(observed,predicted):
         observed_list = observed.tolist()
